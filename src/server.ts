@@ -25,4 +25,4 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
 
 })
 
-app.listen(3333, () => console.log('Servidor online!!!!'))
+app.listen(process.env.APP_PORT, () => console.log('Servidor rodando na porta' , process.env.APP_PORT, '🚀'))
