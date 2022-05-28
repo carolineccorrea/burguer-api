@@ -1,7 +1,7 @@
 import { Router, Request, Response } from "express"
 import { CreateCategoryService } from "../../sevices/category/CreateCategoryService"
 
-class CreateCateogoryController {
+class CreateCategoryController {
     async handle (req: Request, res: Response) {
        const { name } = req.body; 
        const createCategoryService = new CreateCategoryService();
@@ -12,4 +12,4 @@ class CreateCateogoryController {
     }
 }
 
-export { CreateCateogoryController }
+export { CreateCategoryController }

@@ -1,16 +1,16 @@
 import prismaClient from '../../prisma'
 import { hash } from 'bcryptjs'
 
-interface UserRequest{
+interface UserRequest {
   name: string;
   email: string;
   password: string;
 }
 
-class CreateUserService{
+class CreateUserService {
   async execute({ name, email, password }: UserRequest){
 
-    if(!email){
+    if (!email) {
       throw new Error("Email incorrect")
     }
 
@@ -20,7 +20,7 @@ class CreateUserService{
       }
     })
 
-    if(userAlreadyExists){
+    if (userAlreadyExists) {
       throw new Error("User already exists")
     }
 
