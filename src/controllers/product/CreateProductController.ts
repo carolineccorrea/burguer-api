@@ -2,8 +2,8 @@ import {Request, Response } from 'express'
 import { CreateProductService } from '../../sevices/product/CreateProductService';
 
 
-class CreateProductController{
-  async handle(req: Request, res: Response){
+class CreateProductController {
+  async handle(req: Request, res: Response) {
     const { name, price, description, category_id } = req.body;
 
     const createProductService = new CreateProductService();
