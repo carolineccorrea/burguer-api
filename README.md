@@ -9,11 +9,11 @@ API em NodeJS que consiste em cadastrar produtos e administrar pedidos de um res
 * O Usuário pode fazer um cadastro comum com: nome, email e senha
 * O Usuário pode fazer login ou logout
 
-
 ![GitHub repo size](https://img.shields.io/github/repo-size/carolineccorrea/burguer-api)
 ![GitHub](https://img.shields.io/github/license/carolineccorrea/burguer-api)
 ![GitHub language count](https://img.shields.io/github/languages/count/carolineccorrea/burguer-api)
 ![GitHub top language](https://img.shields.io/github/languages/top/carolineccorrea/burguer-api)
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
 
 ## 🚀 Technologias
