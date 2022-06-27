@@ -1,16 +1,17 @@
 import { Request, Response } from 'express'
+import { ok } from '../../helpers';
+import { Controller } from '../../protocols/controller';
+import { HttpResponse } from '../../protocols/http';
 import { DetailUserService } from '../../sevices/user/DetailUserService';
 
-class DetailUserController {
-    async handle(req: Request, res: Response) {
+class DetailUserController implements Controller {
+    async handle(request: any): Promise<HttpResponse> {
 
-        const user_id = req.user_id;
-
+        const user_id = request.user_id;
         const detailUserService = new DetailUserService();
-
         const user = await detailUserService.execute(user_id);
 
-        return res.json(user);
+        return ok(user);
 
     }
 }

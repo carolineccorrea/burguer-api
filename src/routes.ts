@@ -8,17 +8,18 @@ import { DetailUserController } from './controllers/user/DetailUserController';
 import { AuthUserController } from './controllers/user/Login/AuthUserController';
 import { isAuthenticated } from './middlewares/isAuthenticated';
 import uploadConfig from './config/multer'
+import { adaptRoute } from './adapters/express-route-adapter';
 
 const router = Router();
 const upload = multer(uploadConfig.upload('./tmp'))
 
-router.post('/users', new CreateUserController().handle)
-router.post('/login', new AuthUserController().handle)
-router.get('/me', isAuthenticated, new DetailUserController().handle)
+router.post('/users', adaptRoute(new CreateUserController()))
+router.post('/login', adaptRoute(new AuthUserController()))
+router.get('/me', isAuthenticated, adaptRoute(new DetailUserController()))
 
-router.post('/category', new CreateCategoryController().handle)
-router.get('/category', isAuthenticated, new ListCategoryController().handle)
+router.post('/category', adaptRoute(new CreateCategoryController()))
+router.get('/category', adaptRoute(new ListCategoryController()))
 
-router.post('/product', upload.single('file'), new CreateProductController().handle)
+router.post('/product', upload.single('file'), adaptRoute(new CreateProductController()))
 
 export { router }; 

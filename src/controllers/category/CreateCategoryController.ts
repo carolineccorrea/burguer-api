@@ -1,4 +1,5 @@
 import { Router, Request, Response } from "express"
+import { ok } from "../../helpers";
 import { CreateCategoryService } from "../../sevices/category/CreateCategoryService"
 
 class CreateCategoryController {
@@ -8,7 +9,7 @@ class CreateCategoryController {
 
         const category = await createCategoryService.execute({name});
 
-        return res.json(category);
+        return ok(category);
     }
 }
 
