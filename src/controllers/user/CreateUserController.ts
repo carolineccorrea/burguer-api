@@ -6,24 +6,16 @@ import { CreateUserService } from "../../sevices/user/CreateUserService";
 
 class CreateUserController implements Controller {
   async handle(request: any): Promise<HttpResponse> {
-      try {
-        const { name, email, password } = request.body
-        const createUserService = new CreateUserService();
- 
-        const newUser = await createUserService.execute({ name, email, password })
-        return ok(newUser)
-      } catch (error) {
-        return serverError(error)
-      }
-    }
-}
+    try {
+      const { name, email, password } = request.body
+      const createUserService = new CreateUserService();
 
-export namespace CreateUser {
-    export type Request = {
-      name: string
-      email: string
-      password: string
+      const newUser = await createUserService.execute({ name, email, password })
+      return ok(newUser)
+    } catch (error) {
+      return serverError(error)
     }
   }
+}
 
 export { CreateUserController }

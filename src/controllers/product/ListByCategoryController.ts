@@ -6,12 +6,12 @@ import { ListByCategoryService } from '../../sevices/product/ListByCategoryServi
 
 class ListByCategoryController implements Controller {
   async handle(request: any): Promise<HttpResponse> {
-    const category_id  = request.query.category_id as string;
+    const category_id = request.query.category_id as string;
     const listByCategory = new ListByCategoryService();
-
-    const productByCategory = await listByCategory.execute({ 
-    category_id 
-    })
+    const productByCategory = await listByCategory.execute({
+      category_id
+    });
+    
     return ok(productByCategory)
   }
 }

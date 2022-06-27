@@ -12,7 +12,7 @@ class ListCategoryController implements Controller {
             return ok(category);
 
         } catch (error) {
-            return serverError(error)           
+            return serverError(error)
         }
     }
 }
