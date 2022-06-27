@@ -9,6 +9,7 @@ API em NodeJS que consiste em cadastrar produtos e administrar pedidos de um res
 * O Usuário pode fazer um cadastro comum com: nome, email e senha
 * O Usuário pode fazer login ou logout
 
+[![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=carolineccorrea_burguer-api&metric=alert_status)](https://sonarcloud.io/dashboard?id=carolineccorrea_burguer-api)
 ![GitHub repo size](https://img.shields.io/github/repo-size/carolineccorrea/burguer-api)
 ![GitHub](https://img.shields.io/github/license/carolineccorrea/burguer-api)
 ![GitHub language count](https://img.shields.io/github/languages/count/carolineccorrea/burguer-api)
@@ -18,7 +19,7 @@ API em NodeJS que consiste em cadastrar produtos e administrar pedidos de um res
 
 ## 🚀 Technologias
 Projeto foi criado com: 
-* [Nest Framework](https://nestjs.com)
+
 * [PostgreSQL](https://www.postgresql.org)
 * [Swagger](https://swagger.io)
 * [Jest](https://jestjs.io)
