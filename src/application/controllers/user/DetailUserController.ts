@@ -2,7 +2,7 @@ import { Request, Response } from 'express'
 import { ok } from '../../helpers';
 import { Controller } from '../../protocols/controller';
 import { HttpResponse } from '../../protocols/http';
-import { DetailUserService } from '../../sevices/user/DetailUserService';
+import { DetailUserService } from '../../../infra/sevices/user/DetailUserService';
 
 class DetailUserController implements Controller {
     async handle(request: any): Promise<HttpResponse> {

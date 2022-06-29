@@ -1,4 +1,4 @@
-import { AuthUserService } from "../../../sevices/user/Login/AuthUserService";
+import { AuthUserService } from "../../../../infra/sevices/user/Login/AuthUserService";
 import { Request, Response } from 'express';
 
 class AuthUserController {

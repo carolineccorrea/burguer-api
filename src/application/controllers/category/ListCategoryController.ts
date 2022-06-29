@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import { ok, serverError } from '../../helpers';
 import { Controller } from '../../protocols/controller';
 import { HttpResponse } from '../../protocols/http';
-import { ListCategoryService } from '../../sevices/category/ListCategoryService';
+import { ListCategoryService } from '../../../infra/sevices/category/ListCategoryService';
 
 class ListCategoryController implements Controller {
     async handle(request: any): Promise<HttpResponse> {

@@ -2,7 +2,7 @@ import { Router, Request, Response } from "express"
 import { ok, serverError } from "../../helpers";
 import { Controller } from "../../protocols/controller";
 import { HttpResponse } from "../../protocols/http";
-import { CreateUserService } from "../../sevices/user/CreateUserService";
+import { CreateUserService } from "../../../infra/sevices/user/CreateUserService";
 
 class CreateUserController implements Controller {
   async handle(request: any): Promise<HttpResponse> {

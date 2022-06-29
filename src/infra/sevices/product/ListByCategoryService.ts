@@ -1,4 +1,4 @@
-import prismaClient from "../../prisma"
+import prismaClient from "../../../prisma"
 
 interface ProductRequest {
     category_id: string;
@@ -15,4 +15,4 @@ class ListByCategoryService {
     }
 }
 
-export {ListByCategoryService }
+export { ListByCategoryService }

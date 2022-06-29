@@ -1,6 +1,6 @@
 import { Router, Request, Response } from "express"
 import { ok } from "../../helpers";
-import { CreateCategoryService } from "../../sevices/category/CreateCategoryService"
+import { CreateCategoryService } from "../../../infra/sevices/category/CreateCategoryService"
 
 class CreateCategoryController {
     async handle (req: Request, res: Response) {

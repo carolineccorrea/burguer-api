@@ -2,7 +2,7 @@ import { Request, Response } from 'express'
 import { ok, serverError } from '../../helpers';
 import { Controller } from '../../protocols/controller';
 import { HttpResponse } from '../../protocols/http';
-import { CreateProductService } from '../../sevices/product/CreateProductService';
+import { CreateProductService } from '../../../infra/sevices/product/CreateProductService';
 
 
 class CreateProductController implements Controller {
