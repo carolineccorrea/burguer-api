@@ -1,4 +1,3 @@
-import { Router, Request, Response } from "express"
 import { ok, serverError } from "../../helpers";
 import { Controller } from "../../protocols/controller";
 import { HttpResponse } from "../../protocols/http";

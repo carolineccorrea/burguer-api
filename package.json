@@ -6,6 +6,9 @@
   "scripts": {
     "dev": "ts-node-dev src/main/server.ts"
   },
+  "prisma": {
+    "schema": "src/infra/db/schema.prisma"
+  },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
     "@types/cors": "^2.8.12",

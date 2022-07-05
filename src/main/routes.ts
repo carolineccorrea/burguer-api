@@ -19,7 +19,7 @@ router.post('/login', adaptRoute(new AuthUserController()))
 router.get('/me', isAuthenticated, adaptRoute(new DetailUserController()))
 
 router.post('/category', isAuthenticated, adaptRoute(new CreateCategoryController()))
-router.get('/category', isAuthenticated, adaptRoute(new ListCategoryController()))
+router.get('/category', adaptRoute(new ListCategoryController()))
 
 router.post('/product', isAuthenticated, upload.single('file'), adaptRoute(new CreateProductController()))
 
